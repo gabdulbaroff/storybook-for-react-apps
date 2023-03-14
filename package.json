@@ -30,7 +30,8 @@
     "prepare": "husky install",
     "lint": "eslint --fix .",
     "prettier": "prettier --write .",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "chromatic": "chromatic --exit-zero-on-changes"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,11 +50,16 @@
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@storybook/addon-a11y": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.16",
     "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/jest": "^0.0.10",
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/preset-create-react-app": "^4.1.2",
     "@storybook/react": "^6.5.9",
+    "@storybook/test-runner": "^0.9.4",
+    "@storybook/testing-library": "^0.0.13",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -67,7 +73,9 @@
     "@types/styled-components": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "axe-playwright": "^1.2.3",
     "babel-loader": "8.1.0",
+    "chromatic": "^6.17.1",
     "eslint-config-airbnb-typescript": "^16.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.3",
@@ -75,16 +83,23 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-storybook": "^0.6.11",
     "husky": ">=6",
     "jest-axe": "^4.1.0",
     "jest-canvas-mock": "^2.3.1",
     "lint-staged": ">=10",
+    "msw": "^1.1.0",
+    "msw-storybook-addon": "^1.8.0",
     "prettier": "^2.5.0",
     "react-is": "^17.0.2",
-    "react-test-renderer": "^17.0.2"
+    "react-test-renderer": "^17.0.2",
+    "storybook-addon-designs": "^6.3.1"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix",
     "*.{html,md}": "prettier --write"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }

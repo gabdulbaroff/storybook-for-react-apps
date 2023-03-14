@@ -3,6 +3,7 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Restaurant } from '../types'
 
 import { api } from './index'
+// import { api } from './conditional-logic'
 
 export const useFetchRestaurants = () => {
   const [status, setStatus] = useState('idle')
